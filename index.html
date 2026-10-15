@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Juguetón: juguetes, juegos y diversión para todas las edades.">
+  <title>JUGUETÓN — Un mundo de diversión</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">🎉 ¡La diversión está en casa! Envíos gratis desde $150.000 COP</div>
+  <header class="site-header">
+    <a class="logo" href="#" aria-label="Juguetón inicio"><span class="logo-mark">✦</span> juguetón<span class="logo-dot">.</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+    <nav id="mainNav">
+      <a href="#catalogo">Juguetes</a>
+      <a href="#aventura">Nuestra aventura</a>
+      <a href="#favoritos">Favoritos</a>
+    </nav>
+    <div class="header-actions">
+      <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Buscar juguetes..." aria-label="Buscar juguetes"></label>
+      <button class="cart-button" id="cartToggle" aria-label="Abrir carrito">🛍️ <span>Mi bolsa</span><b id="cartCount">0</b></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-content">
+        <span class="eyebrow"><span class="sparkle">✦</span> IMAGINA. JUEGA. DESCUBRE.</span>
+        <h1>Pequeños juguetes.<br><em>Grandes aventuras.</em></h1>
+        <p>Un universo de juegos para despertar la imaginación, crear recuerdos y llenar cada día de sonrisas.</p>
+        <a class="primary-btn" href="#catalogo">Explorar juguetes <span>↗</span></a>
+        <div class="hero-note"><span class="avatar-stack">🧸 🚀 🦄</span><span>Momentos mágicos para todas las edades</span></div>
+      </div>
+      <div class="hero-sticker sticker-one">¡A jugar! <span>✦</span></div>
+      <div class="hero-sticker sticker-two">100% diversión <span>☺</span></div>
+      <div class="hero-bottom">UN MUNDO MÁS DIVERTIDO <span>✳</span> HECHO PARA IMAGINAR</div>
+    </section>
+
+    <section class="category-strip" aria-label="Categorías">
+      <button class="category-pill active" data-category="Todos"><span>🌈</span> Todo</button>
+      <button class="category-pill" data-category="Peluches"><span>🧸</span> Peluches</button>
+      <button class="category-pill" data-category="Carros"><span>🚗</span> Carros</button>
+      <button class="category-pill" data-category="Educativos"><span>🧩</span> Educativos</button>
+      <button class="category-pill" data-category="Muñecos"><span>🦄</span> Muñecos</button>
+      <button class="category-pill" data-category="Juegos"><span>🎲</span> Juegos de mesa</button>
+    </section>
+
+    <section class="catalog section-wrap" id="catalogo">
+      <div class="section-heading">
+        <div><span class="eyebrow">ELIGE TU PRÓXIMA AVENTURA</span><h2>Juguetes que <em>enamoran</em></h2></div>
+        <p>Ideas geniales para regalar, aprender y jugar sin parar.</p>
+      </div>
+      <div class="catalog-toolbar">
+        <span id="resultsLabel">Mostrando nuestros favoritos</span>
+        <select id="sortSelect" aria-label="Ordenar productos">
+          <option value="featured">Ordenar: recomendados</option>
+          <option value="low">Precio: menor a mayor</option>
+          <option value="high">Precio: mayor a menor</option>
+          <option value="name">Nombre: A-Z</option>
+        </select>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+      <div class="empty-state" id="emptyState" hidden>¡Ups! No encontramos juguetes con esa búsqueda. Prueba con otra palabra. 🔎</div>
+    </section>
+
+    <section class="parallax-banner" id="aventura">
+      <div class="parallax-photo"></div>
+      <div class="banner-copy">
+        <span class="eyebrow">MENOS PANTALLAS, MÁS SONRISAS</span>
+        <h2>La imaginación<br>no tiene <em>límites.</em></h2>
+        <p>Jugar es descubrir el mundo a tu manera. Encuentra ese juguete que convierte una tarde normal en una historia increíble.</p>
+        <a class="light-btn" href="#catalogo">Encuentra su favorito <span>↗</span></a>
+      </div>
+      <div class="banner-doodle">✳</div>
+    </section>
+
+    <section class="benefits section-wrap" id="favoritos">
+      <div class="benefit"><span class="benefit-icon">📦</span><div><h3>Envíos con cariño</h3><p>Empacamos cada aventura con cuidado.</p></div></div>
+      <div class="benefit"><span class="benefit-icon">💛</span><div><h3>Regalos memorables</h3><p>Detalles que se convierten en recuerdos.</p></div></div>
+      <div class="benefit"><span class="benefit-icon">🪁</span><div><h3>Aprender jugando</h3><p>Diversión que despierta la curiosidad.</p></div></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="logo footer-logo" href="#"><span class="logo-mark">✦</span> juguetón<span class="logo-dot">.</span></a>
+    <p>Un mundo de diversión, una sonrisa a la vez.</p>
+    <span>© 2026 Juguetón · Demo de tienda online</span>
+  </footer>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="drawer-header"><div><span class="eyebrow">TU PRÓXIMA AVENTURA</span><h2>Mi bolsa <span id="drawerCount">(0)</span></h2></div><button id="closeCart" aria-label="Cerrar carrito">✕</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty"><span>🪁</span><h3>¡Tu bolsa está volando vacía!</h3><p>Encuentra algo que te haga sonreír.</p><button class="primary-btn" id="continueShopping">Seguir explorando ↗</button></div>
+    <div class="cart-footer" id="cartFooter"><div class="subtotal"><span>Subtotal</span><strong id="cartSubtotal">$0</strong></div><p>Los costos de envío se calculan al finalizar la compra.</p><button class="checkout-btn" id="checkoutBtn">Continuar compra <span>→</span></button><small>Demo: no se realizan pagos reales.</small></div>
+  </aside>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
